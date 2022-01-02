@@ -1,0 +1,1 @@
+Js library to keep track of owned and read books. Made for The Odin Project @ theodinproject.com.
