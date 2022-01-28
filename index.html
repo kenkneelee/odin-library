@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Odin Library</title>
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+            rel="stylesheet"
+        />
+        <script src="scripts/main.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Library</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
-</head>
+    <body>
+        <div id="header">
+            <h1>My Library</h1>
+        </div>
 
-<body>
-    <div id="header">
-        <h1>My Library</h1>
-    </div>
+        <div id="libContainer">
+            <button id="newButton">
+                <h2>New Book</h2>
+            </button>
+        </div>
 
+        <div id="newModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>New Book</h2>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label for="title">Title:</label><br />
+                        <input type="text" id="title" name="title" /><br />
+                        <label for="author">Author:</label><br />
+                        <input type="text" id="author" name="author" /><br />
+                        <label for="pages">Pages:</label><br />
+                        <input type="text" id="pages" name="pages" /><br />
 
-    <div id="libContainer">
-        <button id="newButton">
-            <h2>New Book</h2>
-        </button>
+                        <label for="read">Read?</label><br>
+                        <input
+                            type="radio"
+                            id="yes"
+                            name="read"
+                            value="yes"
+                        />
+                        <label for="yes">Yes</label><br />
+                        <input
+                            type="radio"
+                            id="no"
+                            name="read"
+                            value="no"
+                        />
+                        <label for="no">No</label><br />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <h3>Submit button</h3>
+                </div>
+            </div>
+        </div>
 
-
-    </div>
-
-
-    <div id="footer">
-        Made by Kenny Lee for The Odin Project.
-    </div>
-</body>
-
+        <div id="footer">Made by Kenny Lee for The Odin Project.</div>
+    </body>
 </html>
