@@ -79,7 +79,8 @@ button {
 /* The Close Button */
 .close {
     color: #aaa;
-    float: right;
+    position:relative;
+    left:50%;
     font-size: 28px;
     font-weight: bold;
 }
@@ -96,8 +97,10 @@ button {
 /* Modal Header */
 .modal-header {
     padding: 2px 16px;
-    background-color: #005288;
+    background-color: #00395f94;
     color: white;
+    text-align: center;
+    font-size:24px;
 }
 
 /* Modal Body */
@@ -107,8 +110,8 @@ button {
 
 /* Modal Footer */
 .modal-footer {
-    padding: 2px 16px;
-    background-color: #005288;
+    padding: 16px 16px;
+    background-color: #00395f94;
     color: white;
 }
 
@@ -116,8 +119,8 @@ button {
 .modal-content {
     top:20%;
     position: relative;
-    text-align: left;
-    background-color: #fefefe;
+    background-color: #fefefe91;
+    backdrop-filter: blur(4px);
     margin: auto;
     padding: 0;
     border: 1px solid #888;
@@ -125,6 +128,12 @@ button {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s;
+    text-align: center;
+}
+
+#modalSubmit {
+    color:white;
+    background-color: #00395f94;
 }
 
 /* Add Animation */
@@ -157,4 +166,25 @@ button {
 
 #footer {
     border-top: 1px solid gray;
+}
+
+
+
+
+.textInput {
+    width:50%;
+    border-radius: 20px;
+    line-height: 20%;
+    font-size:20px;
+    padding:2%;
+    text-align: center;
+}
+
+form {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
 }
