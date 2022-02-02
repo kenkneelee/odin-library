@@ -107,3 +107,15 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// When the user presses the 'submit' button, add the book to the library
+function validate() {
+  var title = document.getElementById("title").value;
+  var author = document.getElementById("author").value;
+  var pages = document.getElementById("pages").value;
+  var read = document.querySelector('input[name="read"]:checked').value;
+  const dabook = new Book(title, author, pages, read);
+  console.log(dabook);
+  myLibrary.push(dabook);
+  display();
+}

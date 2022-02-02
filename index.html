@@ -33,7 +33,7 @@
                     <h2>New Book</h2>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form onsubmit="return false;">
                         <label for="title">Title</label>
                         <input
                             type="text"
@@ -64,21 +64,22 @@
                                 type="radio"
                                 id="yes"
                                 name="read"
-                                value="yes"
+                                value="Yes"
                             />
                             <label for="yes">Yes</label>
                             <input
                                 type="radio"
                                 id="no"
                                 name="read"
-                                value="no"
+                                value="No"
+                                checked
                             />
                             <label for="no">No</label>
                         </div>
 
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" id="modalSubmit"></form>
+                    <input type="submit" id="modalSubmit" onclick="validate()"></form>
                 </div>
             </div>
         </div>
