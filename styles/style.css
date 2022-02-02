@@ -134,6 +134,13 @@ button {
 #modalSubmit {
     color:white;
     background-color: #00395f94;
+    width: 20%;
+    padding:10px;
+    height: 25%;
+    border: 1px outset black;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: "Playfair Display", serif;
 }
 
 /* Add Animation */
