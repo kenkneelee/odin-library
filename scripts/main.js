@@ -56,8 +56,8 @@ function display() {
         newCard.classList.add("card");
         newCardDelete.classList.add("cardDelete")
 
-        newCard.appendChild(newCardTitle);
         newCard.appendChild(newCardDelete);
+        newCard.appendChild(newCardTitle);
 
         newCardText.appendChild(newCardAuthor);
         newCardText.appendChild(newCardPages);
