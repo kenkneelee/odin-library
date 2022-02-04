@@ -58,13 +58,20 @@ function display() {
         const newCardAuthor = document.createElement("div");
         const newCardPages = document.createElement("div");
         const newCardRead = document.createElement("div");
+        const newCardReadAnswer = document.createElement("span");
 
         newCardTitle.textContent = myLibrary[i].title;
         newCardDelete.textContent = "x";
 
         newCardAuthor.textContent = "By " + myLibrary[i].author;
         newCardPages.textContent = myLibrary[i].pages + " pages";
-        newCardRead.textContent = "Read: " + myLibrary[i].read;
+        newCardRead.textContent = "Read: ";
+        newCardReadAnswer.textContent = myLibrary[i].read;
+        if (myLibrary[i].read == "Yes") {
+            newCardReadAnswer.style.color = "Green";
+        } else {
+            newCardReadAnswer.style.color = "Red";
+        }
 
         newCard.classList.add("card");
         newCardDelete.classList.add("cardDelete");
@@ -75,7 +82,9 @@ function display() {
 
         newCardText.appendChild(newCardAuthor);
         newCardText.appendChild(newCardPages);
+        newCardRead.appendChild(newCardReadAnswer);
         newCardText.appendChild(newCardRead);
+
         newCard.appendChild(newCardText);
 
         container.appendChild(newCard);
@@ -83,7 +92,7 @@ function display() {
         var deleteBtn = document.getElementById("delete" + i);
         deleteBtn.onclick = function () {
             console.log("deleting " + myLibrary[i].title + "...");
-            myLibrary.splice(i,1);
+            myLibrary.splice(i, 1);
             display();
         };
     }
