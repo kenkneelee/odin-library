@@ -21,9 +21,9 @@ function addBookToLibrary() {
 
 // Onstart sample books
 window.onload = function () {
-    const sample1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "Y");
+    const sample1 = new Book("The Hobbit", "J.R.R. Tolkien", "295", "Yes");
     myLibrary.push(sample1);
-    const sample2 = new Book("Harry Potter", "J.K Rowling", "504", "N");
+    const sample2 = new Book("Harry Potter", "J.K Rowling", "504", "No");
     myLibrary.push(sample2);
     display();
 }
@@ -34,26 +34,34 @@ function display() {
     console.log(myLibrary);
     newGrid();
     for (let i = 0; i < myLibrary.length; i++) {
+        myLibrary[i].id = i;
         console.log(myLibrary[i]);
+
         const newCard = document.createElement('div');
         const newCardTitle = document.createElement('h2');
         const newCardText = document.createElement('div');
+        const newCardDelete = document.createElement('span');
 
-        const newCardText1 = document.createElement('div');
-        const newCardText2 = document.createElement('div');
-        const newCardText3 = document.createElement('div');
+        const newCardAuthor = document.createElement('div');
+        const newCardPages = document.createElement('div');
+        const newCardRead = document.createElement('div');
 
         newCardTitle.textContent = myLibrary[i].title;
-        newCardText1.textContent = "By " + myLibrary[i].author;
-        newCardText2.textContent = myLibrary[i].pages + " pages";
-        newCardText3.textContent = "Read: " + myLibrary[i].read;
+        newCardDelete.textContent = "x";
+
+        newCardAuthor.textContent = "By " + myLibrary[i].author;
+        newCardPages.textContent = myLibrary[i].pages + " pages";
+        newCardRead.textContent = "Read: " + myLibrary[i].read;
 
         newCard.classList.add("card");
+        newCardDelete.classList.add("cardDelete")
 
         newCard.appendChild(newCardTitle);
-        newCardText.appendChild(newCardText1);
-        newCardText.appendChild(newCardText2);
-        newCardText.appendChild(newCardText3);
+        newCard.appendChild(newCardDelete);
+
+        newCardText.appendChild(newCardAuthor);
+        newCardText.appendChild(newCardPages);
+        newCardText.appendChild(newCardRead);
         newCard.appendChild(newCardText);
 
         container.appendChild(newCard);
@@ -114,8 +122,10 @@ function validate() {
   var author = document.getElementById("author").value;
   var pages = document.getElementById("pages").value;
   var read = document.querySelector('input[name="read"]:checked').value;
-  const dabook = new Book(title, author, pages, read);
-  console.log(dabook);
-  myLibrary.push(dabook);
+  const newBook = new Book(title, author, pages, read);
+  console.log(newBook);
+  myLibrary.push(newBook);
   display();
+  modal.style.display = "none";
+
 }
