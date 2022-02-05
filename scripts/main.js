@@ -65,6 +65,7 @@ function display() {
 
         newCardAuthor.textContent = "By " + myLibrary[i].author;
         newCardPages.textContent = myLibrary[i].pages + " pages";
+
         newCardRead.textContent = "Read: ";
         newCardReadAnswer.textContent = myLibrary[i].read;
         if (myLibrary[i].read == "Yes") {
@@ -95,6 +96,20 @@ function display() {
             myLibrary.splice(i, 1);
             display();
         };
+
+        newCardReadAnswer.classList.add("toggleButton");
+        newCardReadAnswer.setAttribute("id", "toggle" + i);
+        var toggleRead = document.getElementById("toggle" + i)
+        toggleRead.onclick = function () {
+          if (myLibrary[i].read == "Yes") {
+            myLibrary[i].read = "No";
+            display();
+          }
+          else {
+            myLibrary[i].read = "Yes";
+            display();
+          }
+        }
     }
 }
 

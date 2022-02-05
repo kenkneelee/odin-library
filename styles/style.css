@@ -207,8 +207,22 @@ form {
     margin-bottom:-20px;
 }
 
+
 .cardDelete:hover,
 .cardDelete:focus {
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toggleButton {
+    border-radius: 40px;
+    background-color: gray;
+    padding:0px 10px;
+    border: 1px solid black;
+}
+.toggleButton:hover,
+.toggleButton:focus {
     color: #aaa;
     text-decoration: none;
     cursor: pointer;
