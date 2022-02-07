@@ -18,7 +18,7 @@ body {
 }
 
 #libContainer {
-    background-color: rgba(211, 211, 211, 0.592);
+    background-color: rgba(211, 211, 211, 0.292);
     width: 60%;
     height: 70%;
     display: flex;
@@ -35,8 +35,8 @@ body {
 .card,
 button {
     background-color: rgba(211, 211, 211, 0.7);
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
     border: 1px outset black;
     border-radius: 5px;
     font-size: 12px;
@@ -159,12 +159,13 @@ button {
 
 #header,
 #footer {
-    background-color: rgba(211, 211, 211, 0.592);
+    background-color: rgba(211, 211, 211, 0.292);
     width: 100%;
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color:white;
 }
 
 #header {
@@ -201,7 +202,7 @@ form {
     float:right;
     position:relative;
     left:40%;
-    bottom:0%;
+    bottom: 10%;
     font-size: 10px;
     font-weight: bold;
     margin-bottom:-20px;
@@ -216,10 +217,7 @@ form {
 }
 
 .toggleButton {
-    border-radius: 40px;
-    background-color: gray;
-    padding:0px 10px;
-    border: 1px solid black;
+    text-decoration: underline;
     user-select:none;
 }
 .toggleButton:hover,
