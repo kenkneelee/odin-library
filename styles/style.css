@@ -220,6 +220,7 @@ form {
     background-color: gray;
     padding:0px 10px;
     border: 1px solid black;
+    user-select:none;
 }
 .toggleButton:hover,
 .toggleButton:focus {

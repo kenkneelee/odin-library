@@ -166,4 +166,7 @@ function validate() {
     myLibrary.push(newBook);
     display();
     modal.style.display = "none";
+    document.getElementById("title").value = "";
+    document.getElementById("author").value = "";
+    document.getElementById("pages").value = "";
 }
