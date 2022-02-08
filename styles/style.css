@@ -97,7 +97,7 @@ button {
 /* Modal Header */
 .modal-header {
     padding: 2px 16px;
-    background-color: #00395f94;
+    background-color: #040823b2;
     color: white;
     text-align: center;
     font-size:24px;
@@ -111,13 +111,13 @@ button {
 /* Modal Footer */
 .modal-footer {
     padding: 16px 16px;
-    background-color: #00395f94;
+    background-color: #040823b2;
     color: white;
 }
 
 /* Modal Content */
 .modal-content {
-    top:20%;
+    top:5%;
     position: relative;
     background-color: #fefefe91;
     backdrop-filter: blur(4px);
@@ -133,7 +133,7 @@ button {
 
 #modalSubmit {
     color:white;
-    background-color: #00395f94;
+    background-color: #040823b2;
     width: 20%;
     padding:10px;
     height: 25%;
@@ -150,7 +150,7 @@ button {
         opacity: 0;
     }
     to {
-        top: 20%;
+        top: 5%;
         opacity: 1;
     }
 }

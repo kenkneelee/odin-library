@@ -99,17 +99,16 @@ function display() {
 
         newCardReadAnswer.classList.add("toggleButton");
         newCardReadAnswer.setAttribute("id", "toggle" + i);
-        var toggleRead = document.getElementById("toggle" + i)
+        var toggleRead = document.getElementById("toggle" + i);
         toggleRead.onclick = function () {
-          if (myLibrary[i].read == "Yes") {
-            myLibrary[i].read = "No";
-            display();
-          }
-          else {
-            myLibrary[i].read = "Yes";
-            display();
-          }
-        }
+            if (myLibrary[i].read == "Yes") {
+                myLibrary[i].read = "No";
+                display();
+            } else {
+                myLibrary[i].read = "Yes";
+                display();
+            }
+        };
     }
 }
 
@@ -169,4 +168,5 @@ function validate() {
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
     document.getElementById("pages").value = "";
+    document.getElementById("no").checked = true;
 }
