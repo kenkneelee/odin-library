@@ -119,14 +119,6 @@ function newGrid() {
         e.parentNode.removeChild(e);
     });
 }
-//
-
-// // button to add a new book
-// const newB = document.getElementById("newButton");
-// newB.addEventListener("click", function () {
-//     addBookToLibrary();
-//     display();
-// });
 
 // Get the modal
 var modal = document.getElementById("newModal");

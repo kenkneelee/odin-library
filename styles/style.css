@@ -17,6 +17,28 @@ body {
     background-size: cover;
 }
 
+/* Header and footer */
+#header,
+#footer {
+    background-color: rgba(211, 211, 211, 0.292);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+#header {
+    border-bottom: 1px solid gray;
+}
+
+#footer {
+    border-top: 1px solid gray;
+}
+/* ----------------- */
+
+/* Main library container */
 #libContainer {
     background-color: rgba(211, 211, 211, 0.292);
     width: 60%;
@@ -53,7 +75,7 @@ button {
     font-family: "Playfair Display", serif;
 }
 
-/* The Modal (background) */
+/* modal form (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -67,7 +89,7 @@ button {
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
+/* modal content */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
@@ -76,7 +98,7 @@ button {
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
+/* modal close button */
 .close {
     color: #aaa;
     position:relative;
@@ -91,8 +113,6 @@ button {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Modal ------------------------*/
 
 /* Modal Header */
 .modal-header {
@@ -131,6 +151,7 @@ button {
     text-align: center;
 }
 
+/* modal form submit button */
 #modalSubmit {
     color:white;
     background-color: #040823b2;
@@ -143,7 +164,7 @@ button {
     font-family: "Playfair Display", serif;
 }
 
-/* Add Animation */
+/* modal form animation */
 @keyframes animatetop {
     from {
         top: -300px;
@@ -156,28 +177,6 @@ button {
 }
 
 /* ------------------------------ */
-
-#header,
-#footer {
-    background-color: rgba(211, 211, 211, 0.292);
-    width: 100%;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:white;
-}
-
-#header {
-    border-bottom: 1px solid gray;
-}
-
-#footer {
-    border-top: 1px solid gray;
-}
-
-
-
 
 .textInput {
     width:50%;
@@ -208,7 +207,6 @@ form {
     margin-bottom:-20px;
 }
 
-
 .cardDelete:hover,
 .cardDelete:focus {
     color: #aaa;
@@ -216,6 +214,7 @@ form {
     cursor: pointer;
 }
 
+/* Button to toggle read status */
 .toggleButton {
     text-decoration: underline;
     user-select:none;
